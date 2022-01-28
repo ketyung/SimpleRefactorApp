@@ -28,10 +28,8 @@ extension ContentView {
     func geoView(str : String, index : Int)-> some View {
         
         GeometryReader { geo in
-    
             
             ifView(geo: geo, str: str, index: index)
-          
         }
         .padding(8)
         .frame(width: UIScreen.main.bounds.width * 0.9, height: 60, alignment: .center)
