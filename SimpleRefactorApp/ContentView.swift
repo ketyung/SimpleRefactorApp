@@ -50,7 +50,6 @@ extension ContentView {
             Text("\(str)")
             .frame(width:geo.size.width * 0.8, height:geo.size.height * 0.65)
             .position(x: geo.size.width / 2, y: geo.size.height / 2)
-                
             .foregroundColor(.white)
             .background(Color.blue)
             .cornerRadius(30)
