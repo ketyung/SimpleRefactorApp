@@ -46,36 +46,50 @@ extension ContentView {
         
         
         if ( index % 2 == 0){
-      
-            Text("\(str)")
-            .frame(width:geo.size.width * 0.8, height:geo.size.height * 0.65)
-            .position(x: geo.size.width / 2, y: geo.size.height / 2)
-            .foregroundColor(.white)
-            .background(Color.blue)
-            .cornerRadius(30)
             
+            view1(geo: geo, str: str, index: index)
+        
         }
         else {
             
-            HStack (spacing:20) {
-                
-                ZStack{
-                    
-                
-                    Circle().fill(Color.red).frame(width: 30, height: 30)
-                    
-                    Text("\(index+1)")
-                    
-                }
-                
-                Text("\(str)")
-            }
-            .frame(width:geo.size.width * 0.8, height:geo.size.height * 0.65)
-            .position(x: geo.size.width / 2, y: geo.size.height / 2)
-            .foregroundColor(.white)
-            .background(Color.green)
-            .cornerRadius(30)
+            view2(geo: geo, str: str, index: index)
         }
+    }
+}
+
+extension ContentView {
+    
+    func view1(geo : GeometryProxy, str : String, index : Int) -> some View {
+        
+        Text("\(str)")
+        .frame(width:geo.size.width * 0.8, height:geo.size.height * 0.65)
+        .position(x: geo.size.width / 2, y: geo.size.height / 2)
+        .foregroundColor(.white)
+        .background(Color.blue)
+        .cornerRadius(30)
+        
+    }
+    
+    func view2(geo : GeometryProxy, str : String, index : Int) -> some View{
+        
+        HStack (spacing:20) {
+            
+            ZStack{
+                
+            
+                Circle().fill(Color.red).frame(width: 30, height: 30)
+                
+                Text("\(index+1)")
+                
+            }
+            
+            Text("\(str)")
+        }
+        .frame(width:geo.size.width * 0.8, height:geo.size.height * 0.65)
+        .position(x: geo.size.width / 2, y: geo.size.height / 2)
+        .foregroundColor(.white)
+        .background(Color.green)
+        .cornerRadius(30)
     }
 }
 
